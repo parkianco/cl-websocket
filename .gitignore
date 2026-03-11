@@ -1,0 +1,30 @@
+# FASL files (compiled Lisp)
+*.fasl
+*.fas
+*.lib
+*.o
+
+# SBCL core dumps
+*.core
+
+# Editor backups
+*~
+\#*\#
+.\#*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.idea/
+*.swp
+*.swo
+.vscode/
+
+# Build artifacts
+build/
+dist/
+
+# Common Lisp cache
+~/.cache/common-lisp/

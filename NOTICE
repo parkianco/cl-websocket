@@ -1,0 +1,12 @@
+cl-websocket
+Copyright (c) 2025
+
+This product includes software developed as part of the CLPIC project.
+
+Components:
+- SHA-1 implementation based on RFC 3174
+- Base64 encoding/decoding based on RFC 4648
+- WebSocket protocol implementation based on RFC 6455
+
+All implementations are original pure Common Lisp code with no external
+dependencies beyond SBCL.
