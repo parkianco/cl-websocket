@@ -32,7 +32,7 @@
 
    Returns: String"
   (declare (ignore encoding))
-  (sb-ext:octets-to-foreign-string octets :external-format :utf-8))
+  (sb-ext:octets-to-string octets :external-format :utf-8))
 
 (defun random-bytes (count)
   "Generate COUNT random bytes.
