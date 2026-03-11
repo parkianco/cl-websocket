@@ -1,3 +1,6 @@
+;;;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;;;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; handshake.lisp - WebSocket handshake protocol
 ;;;;
 ;;;; Implements the WebSocket opening handshake per RFC 6455 Section 4.
