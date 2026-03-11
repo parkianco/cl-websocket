@@ -7,7 +7,7 @@
   :name "cl-websocket"
   :description "RFC 6455 WebSocket Protocol Library - Pure Common Lisp"
   :version "1.0.0"
-  :author "CLPIC Project"
+  :author "Parkian Company LLC"
   :license "MIT"
   :depends-on ()
   :serial t
