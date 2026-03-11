@@ -224,7 +224,7 @@
 ;;; Utility Functions
 ;;; ============================================================================
 
-(defun with-websocket ((var host port &rest options) &body body)
+(defmacro with-websocket ((var host port &rest options) &body body)
   "Execute BODY with a WebSocket connection bound to VAR.
 
    Connection is automatically closed when BODY exits.
