@@ -33,4 +33,6 @@
     :components
     ((:file "test-websocket"))))
   :perform (test-op (o c)
-             (symbol-call :cl-websocket.test :run-tests)))
+             (let ((result (symbol-call :cl-websocket.test :run-tests)))
+               (unless result
+                 (error "Tests failed")))))
