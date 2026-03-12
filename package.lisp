@@ -6,6 +6,9 @@
 ;;;; RFC 6455 WebSocket Protocol Library
 ;;;; Pure Common Lisp - no external dependencies
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (require :sb-bsd-sockets))
+
 (in-package #:cl-user)
 
 (defpackage #:cl-websocket
