@@ -373,8 +373,8 @@
                    length)))))
 
         ;; Check we have enough data for mask and payload
-        (let ((mask-size (if masked 4 0))
-              (needed (+ (- pos start) mask-size payload-length)))
+        (let* ((mask-size (if masked 4 0))
+               (needed (+ (- pos start) mask-size payload-length)))
           (when (< available needed)
             (return-from decode-frame (values nil 0)))
 
