@@ -1,19 +1,10 @@
-;;;; Copyright (C) 2025 Park Ian Co
-;;;; License: MIT
-;;;;
-;;;; Implementation for CL_WEBSOCKET
+;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;; SPDX-License-Identifier: BSD-3-Clause
 
-(defun websocket-handshake (key)
-  "Generate WebSocket handshake response."
-  (concatenate 'string key "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"))
+(in-package #:cl-stub-impl)
 
-(defun websocket-frame (opcode data)
-  "Create WebSocket frame."
-  (declare (ignore opcode data))
-  (make-array 0))
+(defun main-function (input) "Core implementation function." (values input (length input)))
 
-(defun websocket-parse-frame (frame)
-  "Parse WebSocket frame."
-  (declare (ignore frame))
-  (list :opcode 1 :data ""))
+(defun helper (x) "Helper computation." (sxhash x))
 
+(defun process (data) "Process data stream." (if (listp data) (mapcar #'helper data) (list (helper data))))
