@@ -1,3 +1,6 @@
+;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; cl-websocket.asd - WebSocket Protocol Library
 ;;;;
 ;;;; RFC 6455 compliant WebSocket implementation in pure Common Lisp.
@@ -6,7 +9,7 @@
 (asdf:defsystem #:cl-websocket
   :name "cl-websocket"
   :description "RFC 6455 WebSocket Protocol Library - Pure Common Lisp"
-  :version "1.0.0"
+  :version "0.1.0"
   :author "Parkian Company LLC"
   :license "MIT"
   :depends-on ()
@@ -21,7 +24,7 @@
      (:file "handshake")
      (:file "connection")
      (:file "client"))))
-  :in-order-to ((test-op (test-op #:cl-websocket/test))))
+  :in-order-to ((asdf:test-op (test-op #:cl-websocket/test))))
 
 (asdf:defsystem #:cl-websocket/test
   :name "cl-websocket/test"
@@ -32,7 +35,7 @@
   ((:module "test"
     :components
     ((:file "test-websocket"))))
-  :perform (test-op (o c)
-             (let ((result (symbol-call :cl-websocket.test :run-tests)))
+  :perform (asdf:test-op (o c)
+             (let ((result (uiop:symbol-call :cl-websocket.test :run-tests)))
                (unless result
                  (error "Tests failed")))))
