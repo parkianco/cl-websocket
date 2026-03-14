@@ -8,9 +8,22 @@
 
 (in-package :cl-user)
 
-(defpackage :CL_WEBSOCKET
+(defpackage :cl-websocket
   (:nicknames :websocket)
   (:use :cl)
-  (:export))
+  (:export
+   #:websocket-frame
+   #:websocket-frame-p
+   #:make-websocket-frame
+   #:websocket-frame-fin-p
+   #:websocket-frame-opcode
+   #:websocket-frame-masked-p
+   #:websocket-frame-masking-key
+   #:websocket-frame-payload
+   #:make-text-frame
+   #:encode-frame
+   #:decode-frame
+   #:mask-payload
+   #:unmask-payload))
 
-(in-package :CL_WEBSOCKET)
+(in-package :cl-websocket)
