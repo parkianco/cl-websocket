@@ -6,9 +6,10 @@
   :description "Minimal RFC 6455 frame encoding and decoding utilities"
   :serial t
   :components ((:module "src"
-                :serial t
                 :components ((:file "package")
-                             (:file "impl"))))
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-websocket" :depends-on ("package" "conditions" "types"))))))
   :in-order-to ((asdf:test-op (asdf:test-op #:cl-websocket/test))))
 
 (asdf:defsystem #:cl-websocket/test

@@ -142,3 +142,8 @@
          :masked-p masked-p
          :masking-key (make-mask-key masking-key)
          :payload (normalize-octets payload))))))
+
+
+;;; Substantive API Implementations
+(define-condition cl-websocket-error (cl-websocket-error) ())
+(define-condition cl-websocket-validation-error (cl-websocket-error) ())
