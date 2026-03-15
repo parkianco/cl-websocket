@@ -6,7 +6,9 @@
 (defpackage #:cl-websocket
   (:use #:cl)
   (:export
-   #:cl-websocket-error
+   #:with-websocket-timing
+   #:websocket-batch-process
+   #:websocket-health-check#:cl-websocket-error
    #:cl-websocket-validation-error#:normalize-octets
    #:make-mask-key
    #:make-text-frame

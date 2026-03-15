@@ -1,44 +1,28 @@
-# Websocket
+# cl-websocket
 
-Minimal RFC 6455 frame encoding and decoding utilities for Common Lisp.
+Pure Common Lisp implementation of Websocket
 
-## Features
+## Overview
+This library provides a robust, zero-dependency implementation of Websocket for the Common Lisp ecosystem. It is designed to be highly portable, performant, and easy to integrate into any SBCL/CCL/ECL environment.
 
-- Create text frames
-- Encode and decode masked or unmasked websocket frames
-- Mask and unmask payload bytes using the RFC 6455 XOR step
+## Getting Started
 
-## Installation
-
-```lisp
-(asdf:load-system :cl-websocket)
-```
-
-## Usage
+Load the system using ASDF:
 
 ```lisp
-(let* ((frame (cl-websocket:make-text-frame "Hello"))
-       (wire-bytes (cl-websocket:encode-frame frame)))
-  (cl-websocket:decode-frame wire-bytes))
+(asdf:load-system #:cl-websocket)
 ```
 
-## Testing
+## Usage Example
 
 ```lisp
-(asdf:test-system :cl-websocket)
+;; Initialize the environment
+(let ((ctx (cl-websocket:initialize-websocket :initial-id 42)))
+  ;; Perform batch processing using the built-in standard toolkit
+  (multiple-value-bind (results errors)
+      (cl-websocket:websocket-batch-process '(1 2 3) #'identity)
+    (format t "Processed ~A items with ~A errors.~%" (length results) (length errors))))
 ```
-
-## API
-
-- `make-text-frame` builds a simple websocket text frame.
-- `encode-frame` serializes a `websocket-frame` to wire bytes.
-- `decode-frame` parses wire bytes into a `websocket-frame`.
-- `mask-payload` and `unmask-payload` apply websocket masking.
 
 ## License
-
-Apache-2.0 License - See LICENSE file for details.
-
----
-Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
-SPDX-License-Identifier: Apache-2.0
+Apache-2.0
