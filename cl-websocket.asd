@@ -1,7 +1,7 @@
 (asdf:defsystem #:cl-websocket
   :name "cl-websocket"
   :version "0.1.0"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :description "Minimal RFC 6455 frame encoding and decoding utilities"
   :serial t
@@ -12,7 +12,7 @@
   :in-order-to ((asdf:test-op (asdf:test-op #:cl-websocket/test))))
 
 (asdf:defsystem #:cl-websocket/test
-  :name "cl-websocket/test"
+  :name "cl-websocket"
   :depends-on (#:cl-websocket)
   :serial t
   :components ((:module "test"
