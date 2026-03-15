@@ -2,7 +2,7 @@
   :name "cl-websocket"
   :version "0.1.0"
   :author "Parkian Company LLC"
-  :license "BSD-3-Clause"
+  :license "Apache-2.0"
   :description "Minimal RFC 6455 frame encoding and decoding utilities"
   :serial t
   :components ((:module "src"
