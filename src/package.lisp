@@ -6,7 +6,11 @@
 (defpackage #:cl-websocket
   (:use #:cl)
   (:export
-   #:with-websocket-timing
+   #:parse-query-string
+   #:http-status-text
+   #:render-simple-tag
+   #:url-encode
+#:with-websocket-timing
    #:websocket-batch-process
    #:websocket-health-check#:cl-websocket-error
    #:cl-websocket-validation-error#:normalize-octets

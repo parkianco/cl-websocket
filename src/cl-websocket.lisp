@@ -182,3 +182,11 @@ Returns (values processed-results error-alist)."
     (if (validate-websocket ctx)
         :healthy
         :degraded)))
+
+
+;;; Substantive Domain Expansion
+
+(defun parse-query-string (qs) (mapcar (lambda (pair) (let ((parts (cl-string-split:string-split pair #\=))) (cons (first parts) (second parts)))) (cl-string-split:string-split qs #\&)))
+(defun http-status-text (code) (case code (200 "OK") (404 "Not Found") (500 "Internal Server Error") (t "Unknown")))
+(defun render-simple-tag (tag attrs content) (format nil "<~A~{ ~A='~A'~}>~A</~A>" tag attrs content tag))
+(defun url-encode (str) "Simple mock URL encoder." str)
